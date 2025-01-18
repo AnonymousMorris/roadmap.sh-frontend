@@ -1,0 +1,253 @@
+
+html {
+    font-size: 16px;
+}
+*{
+    margin: 0;
+    border: 0;
+}
+ul, ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    background-color: transparent;
+    color: inherit;
+}
+
+body {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 60vh 80vh 80vh;
+    position: relative;
+    scrollbar-width: none;
+    overscroll-behavior: none;
+}
+
+/*nav styling*/
+nav {
+    width: 95%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    left: 2.5vw;
+    right: 2.5vw;
+    flex-direction: row;
+    position: absolute;
+}
+nav .logo {
+    height: 3rem;
+    max-width: 100%;
+    max-height: 100%;
+}
+nav .home {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+nav .home .name {
+    font-size: 1.5rem;
+    color: white;
+}
+nav ul li {
+    display: inline-block;
+    font-size: 1.1rem;
+    color: white;
+    /*text-shadow: 0.3rem 0.3rem 0.1rem rgba(0, 0, 0, 0.75);*/
+    text-shadow: 0.3rem 0.3rem 0.1rem black;
+}
+nav ul li a:hover {
+    text-decoration: underline;
+}
+nav ul li:not(:last-child)::after {
+    content: " / ";
+}
+
+/* Banner */
+.banner {
+    width: 100%;
+    height: 100%;
+    /*background-color: cornflowerblue;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*display: grid;*/
+    /*background-color: #ffffff; !* Background color of the grid *!*/
+    /*background-image:*/
+    /*        linear-gradient(to right, #000000 1px, transparent 1px),*/
+    /*        linear-gradient(to bottom, #000000 1px, transparent 1px);*/
+    /*background-size: 20px 20px; !* Size of each grid square *!*/
+    background-image: url("./assets/banner.jpg");
+    background-size: cover;
+    background-position: center;
+    filter: saturate(80%);  background-repeat: no-repeat;
+    z-index: -1;
+}
+.banner h1 {
+    font-size: 5rem;
+    color: white;
+    text-shadow: 0.3rem 0.3rem 0.1rem rgba(0, 0, 0, 0.75);
+}
+
+/* Main Body */
+.main-body {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1.5fr;
+    color: white;
+    background-color: #566e58;
+}
+.projects-section {
+}
+.projects-section h2{
+    margin: 1.5rem;
+    font-size: 2rem;
+}
+.projects-section li {
+    width: 90%;
+    margin-left: 1.5rem;
+    line-height: 2.5rem;
+    font-size: 1.2rem;
+}
+.projects-section li:hover {
+    background-color: #2c4026;
+    transition: 0.3s ease;
+}
+.projects-section li hr {
+    width: 100%;
+    height: 1px;
+    margin-left: 0;
+    background-color: white;
+}
+/* Main Body - Experience */
+.experience-section {
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+}
+.experience-section h2 {
+    margin: 1.5rem;
+    font-size: 2rem;
+}
+.experience-section ul {
+    width: 100%;
+}
+.experience-section li {
+    margin-left: 1.5rem;
+}
+.entry-title {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.experience-section li h4 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: inline;
+}
+.experience-section li p {
+    font-size: 1.2rem;
+    display: inline;
+}
+.date {
+    display: inline;
+    font-size: 1.2rem;
+    padding-right: 1rem;
+}
+.description {
+    margin-top: 1rem;
+    list-style: inside;
+    font-size: 1rem;
+}
+/* Main Body - Education */
+.education-section h2 {
+    margin: 1.5rem;
+    font-size: 2rem;
+}
+.education-entry {
+    margin: 1.5rem;
+}
+.education-section h4 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: inline;
+}
+.education-section li {
+    margin-left: 1.5rem;
+}
+/* Main Body - Award Section */
+.award-section h2{
+    margin: 1.5rem;
+    font-size: 2rem;
+}
+.award-entry {
+    margin: 1.5rem;
+}
+.award-section li {
+    margin-left: 1.5rem;
+}
+.award-section h4 {
+    font-weight: bold;
+    display: inline;
+}
+.award-entry p {
+    font-size: 1.2rem;
+    display: inline;
+}
+/*.award-section .date {*/
+/*    display: inline;*/
+/*    padding-right: 1rem;*/
+/*}*/
+
+/* Quote */
+.testimonials {
+    width: 100%;
+    height: 100%;
+    border-top: black solid 2px;
+    background-color: #566e58;
+}
+
+@media (max-width: 600px) {
+    body {
+        display: grid;
+        grid-template-rows: 40vh 1fr 80vh;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .banner h1 {
+        /*display: none;*/
+        width: 60vw;
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .main-body {
+        display: flex;
+        flex-direction: column;
+        border: 0;
+    }
+    .main-body * {
+        border: none;
+        margin-bottom: 2rem;
+    }
+    .main-body h2 {
+        text-align: center;
+        margin-top: 2rem;
+    }
+    .entry-title {
+        display: flex;
+        flex-direction: column;
+    }
+    .date {
+        font-size: 1rem;
+        margin: 0;
+    }
+}

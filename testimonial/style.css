@@ -1,0 +1,145 @@
+--root {
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body{
+    font-family: arial, sans-serif;
+    font-size: 16px;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+/* Testimonial Card 1*/
+.card-1 {
+    margin: 1rem;
+    max-width: 300px;
+    width: 100%;
+    border-radius: 1rem;
+    background-color: white;
+}
+
+.card-1 .quote {
+    margin: 0.5rem;
+    padding: 2rem;
+    background-color: black;
+    color: white;
+    border-radius: 1.5rem;
+}
+
+.card-1 .author:before {
+    content: "";
+    width: 2rem;
+    height: 2rem;
+    margin-top: -8rem;
+    margin-left: 1rem;
+    position: absolute;
+    background-color: black;
+    transform: rotate(45deg);
+}
+.card-1 .author {
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+}
+.card-1 .author img {
+    width: 3.5rem;
+    height: 3.5rem;
+    padding: 0.1rem;
+    border-radius: 50%;
+    background-color: lightgray;
+}
+.card-1 .author .description {
+    margin: 1rem;
+}
+.card-1 .author .description .name {
+    font-size: 1.1rem;
+    font-weight: normal;
+}
+.card-1 .author .description sub {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: normal;
+    margin-top: -0.5rem;
+}
+
+
+/* Card 2*/
+.card-2 {
+    max-width: 300px;
+    width: 100%;
+    margin: 1rem;
+    background-color: white;
+    border-radius: 0.75rem;
+    border: 2px solid black;
+}
+.card-2 .quote {
+    margin: 1.5rem;
+}
+.card-2 .author {
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+}
+.card-2 .author img {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    background-color: lightgray;
+}
+.card-2 .author .description {
+    margin: 1rem;
+}
+.card-2 .author .description .name {
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+.card-2 .author .description sub {
+    font-size: 0.8rem;
+}
+
+
+/* Card 3 */
+.card-3 {
+    max-width: 600px;
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    position: relative;
+}
+.card-3 img {
+    height: 12rem;
+    margin-left: 1.5rem;
+    border-radius: 1rem;
+    background-color: lightgray;
+}
+.card-3 .quote {
+    margin: 1.5rem;
+    background-color: black;
+    color: white;
+    border-radius: 1.5rem;
+    padding: 1rem 2rem;
+}
+.card-3 .quote .rating {
+    margin: 0.5rem 0;
+    color: gold;
+    font-size: 1.5rem;
+}
+.card-3 .quote h3 {
+    /*margin-top: 0.5rem;*/
+}
+.card-3 .quote sub {
+    font-weight: 300;
+}
+.card-3 .quote p {
+    margin-top: 1rem;
+}

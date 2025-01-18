@@ -1,0 +1,103 @@
+:root {
+    --timeline-pos:35;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    background: lightgray;
+}
+
+.change-log {
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px black solid;
+    border-radius: 1rem;
+    background-color: white;
+}
+
+/* Header */
+.change-log-header {
+    text-align: center;
+    margin: 2rem;
+}
+.change-log-header > h1 {
+    font-size: 2rem;
+}
+.change-log-header > sub {
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+
+/* Timeline */
+.timeline {
+    width: 90%;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+.timeline:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    margin-left: -1px;
+    /*left: 30%;*/
+    left: calc(var(--timeline-pos) * 1%);
+    background: black;
+}
+
+/* Timeline Items*/
+.timeline-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+.timeline-item > .timeline-date {
+    max-width: calc((var(--timeline-pos) - var(--timeline-pos) / 5) * 1%);
+    width: 100%;
+    text-align: right;
+    font-size: 0.8rem;
+}
+.timeline-item > .timeline-content {
+    width: 60%;
+}
+.timeline-item:before {
+    content: "";
+    width: 0.5rem;
+    height: 0.5rem;
+    position: absolute;
+    border-radius: 50%;
+    background: black;
+    left: calc(var(--timeline-pos) * 1%);
+    margin-left: -0.25rem;
+}
+
+.change-log-footer {
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.change-log-footer > button {
+    border-radius: 0.75rem;
+    padding: 0.75rem;
+    font-size: 1rem;
+    background-color: black;
+    color: white;
+}
